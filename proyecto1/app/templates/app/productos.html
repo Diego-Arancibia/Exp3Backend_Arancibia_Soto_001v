@@ -1,0 +1,42 @@
+{% extends 'app/base.html'%}
+
+{%load static%}
+
+{% block js %}  
+  
+{% endblock %}
+
+{% block css %}        
+{% endblock %}
+
+{% block contenido %}
+
+{% load humanize %}
+
+<h2>Productos</h2>
+<div class="container">
+    <div class="row">
+        {%for p in productos %}
+
+                <div class="producto">
+                    <div class="img">
+                        {% if p.imagen %}
+                        <a target="_blank" href="{{ p.imagen.url}}">
+                        <img src="{{ p.imagen.url}}"  alt="Imagen_subida" width="600" height="400">
+                        {% endif %}
+                        <div class="detalle">
+                            <h6>{{p.nombre | capfirst}}</h6>
+                            <h5>{{p.descripcion | title}}</h5>
+                            <h6>${{p.precio | intcomma }}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> 
+        </div>
+    </div>    
+
+
+
+
+{% endblock %}

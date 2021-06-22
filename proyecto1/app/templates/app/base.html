@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Desayunos a Domicilio </title>
+    {%load static%}
+    {% block css %}     
+    {% endblock %}
+	
+    <link rel="stylesheet" href="{%static 'app/css/estilos.css' %}">
+	<link rel="stylesheet" href="{%static 'app/css/animate.css' %}">
+	<link rel="stylesheet" href="{%static 'app/css/bootstrap.min.css' %}">
+	<script src="{%static 'app/js/wow.min.js' %}"></script>
+	<script> new WOW().init(); </script>
+
+</head>
+<body>
+	  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" >          
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{%static 'app/img/icon.jpg' %}" width="50" height="40">
+        </a>
+           <div class="collapse navbar-collapse" id="opciones">   
+             <ul class="navbar-nav ml-auto">
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".3s"><a class="nav-link" href="{% url 'home' %}">Inicio</a></li>
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".5s"><a class="nav-link" href="{% url 'producto' %}">Productos</a></li>
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".7s"><a class="nav-link" href="{% url 'galeria' %}">Galería</a></li>
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".9s"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>  
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".9s"><a class="nav-link" href="{% url 'agregar_producto' %}">Create_Product</a></li> 
+                <li class="nav-item" class="wow bounceInDown" data-wow-duration="2s" data-wow-delay=".9s"><a class="nav-link" href="{% url 'listar_producto' %}">Update and Delete</a></li>     
+             </ul>
+            </div>
+      </nav>
+
+	<div id='contenido'>
+
+        
+
+        {% block contenido %}        
+        {% endblock %}
+
+    </div>
+	<footer>       
+       <div class="container-footer-all">        
+            <div class="container-body">
+                <div class="columna1">
+                    <h1>Información de nuestro proyecto</h1>
+
+                    <p>Este es nuestro proyecto en DUOCUC sede Maipú y con mucho esfuerzo y aprendizaje comenzamos a formarlo.
+                    <br>Nuestra idea es que este sitio sea un punto de encuentro para todos aquellos que emprenden con sus
+                    desayunos, onces, regalos de cumpleaños, etc, dejando nuestro primer enfoque a los que venden y entregan desayuno.
+                    <br>Esperamos en una segunda etapa mas avanzada, que el emprendedor pueda hacer match con un repartidor para las entregas y geolocalizar las ofertas por comuna.</p>
+
+                </div>
+                <div class="columna2">
+                    <h1>Redes Sociales</h1>
+                    <div class="row">
+                        <img src="{%static 'app/icon/facebook.' %}png">
+                        <label><a href="https://www.facebook.com" target="=_blank">Síguenos en Facebook</a></label>
+                     </div>
+                    <div class="row">
+                        <img src="{%static 'app/icon/twitter.p' %}ng">
+                       <label><a href="https://www.twitter.com" target="_blank">Síguenos en Twitter </a></label>
+                    </div>
+                    <div class="row">
+                        <img src="{%static 'app/icon/instagram' %}.png">
+                        <label><a href="https://www.instragram.com" target="_blank">Síguenos en Instagram </a></label>
+                    </div>
+                    <div class="row">
+                        <img src="{%static 'app/icon/tiktok.png'%}">
+                        <label><a href="https://www.tiktok.com" target="_blank">Síguenos en TikTok</a></label>
+                    </div>
+                    <div class="row">
+                        <img src="{%static 'app/icon/pinterest' %}.png">
+                        <label><a href="https://www.pinterest.com" target="_blank">Síguenos en Pinterest</a></label>
+                    </div>
+                </div>
+                <div class="columna3">
+                    <h1>Información de Contacto</h1>
+                    <div class="row2">
+                        <img src="{%static 'app/icon/house.png' %}">
+                        <label>Avenida Siempreviva 663, Spingfield, USA</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="{%static 'app/icon/smartphon' %}e.png">
+                        <label>+56 9 5555 riente</label>
+                    </div>
+                    <div class="row2">
+                        <img src="{%static 'app/icon/contact.p' %}ng">
+                         <label>proyecto_emprendedores@desayunos.cl</label>
+                    </div>
+                </div>
+            </div>        
+        </div>        
+        <div class="container-footer">
+               <div class="footer">
+                    <div class="copyright">
+                       © Diego Arancibia - Leandro Soto | Programación Web | Sección 001V | Copyright 2021 
+                    </div>
+
+                    <div class="information">
+                      Información | Proyecto | <a href="#"> Términos y Condiciones </a>
+                    </div>
+                </div>
+            </div>        
+    </footer>
+          <div class="btnWhats position-fixed">
+      <a href="https://wa.me/56942131176"><img src="{%static 'app/img/whatsapp.png' %}" alt="Contacto Whatsapp" class="img-fluid" width="304" height="236"></a>
+      
+    </div>
+
+    
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    {% if messages %}
+            {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "title": "Felicitaciones",
+                    "text":"{{m}}",
+                    "icon": "success"
+                })
+            </script>
+            {% endfor %}
+        {% endif %}
+
+      {% block js %}
+      {% endblock %}
+</body>
+</html>
+
+

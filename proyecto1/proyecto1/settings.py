@@ -83,8 +83,8 @@ DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xepdb1',
-        'USER': 'c##prueba003',
-        'PASSWORD': 'hola123',
+        'USER': 'DJANGO',
+        'PASSWORD': 'prueba',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
@@ -92,6 +92,7 @@ DATABASES = {
         },
     }
 }
+
 
 
 # Password validation

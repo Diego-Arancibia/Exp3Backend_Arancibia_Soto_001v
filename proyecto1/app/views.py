@@ -21,7 +21,7 @@ def contacto (request):
             data["mensaje"] = "contacto guardado"
         else:
             data["form"] = formulario
-    return render(request, 'app/contacto.html',data)
+    return render(request, 'app/contacto.html', data)
 
 
 def galeria (request):

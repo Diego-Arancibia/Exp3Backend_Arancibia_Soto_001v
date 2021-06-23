@@ -21,10 +21,11 @@ class Producto(models.Model):
 
 opciones_consulta =[
     [0, "contacto"],
-    [2, "reclamo"],
-    [3, "sugerencia"],
+    [1, "reclamo"],
+    [2, "sugerencia"],
     [3, "felicitaciones"]   
 ]
+
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)

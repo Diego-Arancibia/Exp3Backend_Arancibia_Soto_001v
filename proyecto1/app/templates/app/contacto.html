@@ -1,6 +1,8 @@
 {% extends 'app/base.html'%}
 {%load static%}
-{% block js %}   
+{% block js %} 
+{% endblock %}
+{% block css %}        
 {% endblock %}
 {% block contenido %}
 {% load crispy_forms_tags%}
@@ -19,11 +21,11 @@
             <article>
                 <h3 class="wow fadeInRight" data-wow-duration ="3s" >¡Escribenos!, te contactaremos a la brevedad</h3>
                 
-                <form action="" class="formulario_contacto" method="post">
+                <form action="" class="formulario_contacto" method="POST">
                     
                     {% csrf_token %}
-
-                    {{ form |  crispy}}
+ 
+                    {{ form | crispy}}
 
                     <br>
                 <div class="d-flex justify-content-end">
